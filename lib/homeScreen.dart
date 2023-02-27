@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'Counter.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -78,7 +80,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               },
             ),
-          )
+          ),
+          TextButton.icon(onPressed: (){
+            Get.to(CounterApp());
+
+          }, icon: Icon(Icons.add), label: Text('Counter App'))
         ],
       ),
       floatingActionButton: FloatingActionButton(
